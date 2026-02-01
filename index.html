@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Veyra Utilities</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,system-ui,sans-serif;background:#0a0a0d;color:#e8e8ea;overflow-x:hidden}
+
+/* Fade-up animation */
+@keyframes fadeUp{0%{opacity:0;transform:translateY(25px)}100%{opacity:1;transform:translateY(0)}}
+.fade{opacity:0;animation:fadeUp .9s ease forwards}
+
+/* Smooth scroll */
+html{scroll-behavior:smooth}
+
+/* Layout */
+.wrap{width:100%;max-width:900px;margin:0 auto;padding:60px 20px;display:flex;flex-direction:column;gap:100px}
+
+/* Header */
+.header{display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{width:48px;height:48px;border-radius:12px;object-fit:cover;border:1px solid #2a2a35}
+.logo-text{display:flex;flex-direction:column}
+.logo-title{font-size:20px;font-weight:700}
+.logo-sub{font-size:12px;color:#9a9ab0}
+.nav{display:flex;gap:22px}
+.nav a{
+    text-decoration:none;
+    color:#b8b8c5;
+    font-size:15px;
+    transition:.2s
+}
+.nav a:hover{color:#a56bff}
+
+/* Hero */
+.hero{text-align:center;display:flex;flex-direction:column;gap:20px}
+.hero-title{font-size:48px;font-weight:700;line-height:1.2}
+.hero-title span{color:#a56bff}
+.hero-sub{font-size:17px;color:#b5b5c5;max-width:540px;margin:0 auto}
+.hero-micro{font-size:12px;color:#7f7f8f;margin-top:-6px}
+.hero-actions{display:flex;justify-content:center;gap:16px;margin-top:10px}
+.btn{padding:12px 24px;border-radius:10px;font-size:15px;border:1px solid #2a2a35;background:#14141a;color:#e5e5f0;cursor:pointer;transition:.2s;text-decoration:none}
+.btn:hover{background:#1a1a22}
+.btn-primary{background:#a56bff;border-color:#a56bff;color:#ffffff}
+.btn-primary:hover{filter:brightness(1.07)}
+
+/* Section */
+.section{text-align:center;display:flex;flex-direction:column;gap:14px}
+.section-title{font-size:30px;font-weight:600}
+.section-sub{font-size:16px;color:#9a9ab0}
+
+/* Footer */
+.footer{border-top:1px solid #1a1a22;padding-top:20px;font-size:13px;color:#7a7a8f;display:flex;justify-content:space-between}
+.footer a{
+    text-decoration:none;
+    color:#9a9ab5
+}
+.footer a:hover{color:#fff}
+.footer-micro{font-size:11px;color:#6f6f7f;margin-top:4px}
+
+@media(max-width:600px){
+.hero-title{font-size:36px}
+.nav{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="header fade" style="animation-delay:.1s">
+<div class="logo">
+<img src="https://cdn.discordapp.com/attachments/1466660279071936586/1467576577733689529/9r8IAKmEhQWpi2RfdE0p37EAAqWCx9_-fAUjN0xd5z8.png?ex=6980e2b2&is=697f9132&hm=8a92c21dd422c64fb4815edf39d1c3ee174b5bc5ed23e15d7df7f19dfe924c7e&">
+<div class="logo-text">
+<div class="logo-title">Veyra Utilities</div>
+<div class="logo-sub">ERLC Utility Bot</div>
+</div>
+</div>
+<div class="nav">
+<a href="#">Home</a>
+<a href="https://discord.gg/fCP8DPyTTv">Support</a>
+<a href="https://discord.com/oauth2/authorize?client_id=1467575502838567098&integration_type=0&scope=bot%20applications.commands&permissions=8">Invite</a>
+</div>
+</div>
+
+<!-- HERO -->
+<div class="hero fade" style="animation-delay:.25s">
+<div class="hero-title">Moderation made<span> easy</span>.</div>
+<div class="hero-sub">Veyra Utilities focuses on clarity, speed, and simplicity. A premium toolset designed for servers that want things done right.</div>
+<div class="hero-micro">New improvements roll out continuously.</div>
+<div class="hero-actions">
+<a href="https://discord.com/oauth2/authorize?client_id=1467575502838567098&integration_type=0&scope=bot%20applications.commands&permissions=8" class="btn-primary btn">Add Veyra</a>
+<a href="https://discord.gg/fCP8DPyTTv" class="btn">Support Server</a>
+</div>
+</div>
+
+<!-- FEATURE SECTION -->
+<div class="section fade" style="animation-delay:.45s">
+<div class="section-title">Built for ERLC Servers</div>
+<div class="section-sub">More details will appear here as features expand.</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer fade" style="animation-delay:.6s">
+<div>
+© <span id="year"></span> Veyra Utilities
+<div class="footer-micro">Quietly improving behind the scenes.</div>
+</div>
+<div><a href="#">Status</a></div>
+</div>
+
+</div>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear()
+</script>
+
+</body></html>
