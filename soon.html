@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" href="veyra.png" type="image/png">
+<title>Veyra Utilities</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,system-ui,sans-serif;background:#0a0a0d;color:#e8e8ea;overflow-x:hidden}
+@keyframes fadeUp{0%{opacity:0;transform:translateY(25px)}100%{opacity:1;transform:translateY(0)}}
+.fade{opacity:0;animation:fadeUp .9s ease forwards}
+html{scroll-behavior:smooth}
+.wrap{width:100%;max-width:900px;margin:0 auto;padding:60px 20px;display:flex;flex-direction:column;gap:100px}
+
+.header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{width:48px;height:48px;border-radius:12px;object-fit:cover;border:1px solid #2a2a35}
+.logo-text{display:flex;flex-direction:column}
+.logo-title{font-size:20px;font-weight:700}
+.logo-sub{font-size:12px;color:#9a9ab0}
+
+.nav{display:flex;gap:22px;flex-wrap:wrap}
+.nav a{
+    text-decoration:none;
+    color:#b8b8c5;
+    font-size:15px;
+    transition:.2s
+}
+.nav a:hover{color:#a56bff}
+
+.hero{text-align:center;display:flex;flex-direction:column;gap:20px}
+.hero-title{font-size:48px;font-weight:700;line-height:1.2}
+.hero-title span{color:#a56bff}
+
+.footer{border-top:1px solid #1a1a22;padding-top:20px;font-size:13px;color:#7a7a8f;display:flex;justify-content:space-between;flex-wrap:wrap}
+.footer a{
+    text-decoration:none;
+    color:#9a9ab5
+}
+.footer a:hover{color:#fff}
+
+@media(max-width:600px){
+.hero-title{font-size:34px}
+.header{gap:15px}
+.nav{width:100%;justify-content:center}
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<div class="header fade" style="animation-delay:.1s">
+<div class="logo">
+<img src="veyra.png">
+<div class="logo-text">
+<div class="logo-title">Veyra Utilities</div>
+<div class="logo-sub">ERLC Utility Bot</div>
+</div>
+</div>
+<div class="nav">
+<a href="https://discord.gg/fCP8DPyTTv">Support</a>
+<a href="https://veyra-five.vercel.app/">Invite</a>
+</div>
+</div>
+
+<div class="hero fade" style="animation-delay:.25s">
+<div class="hero-title">Coming<span> Soon</span>.</div>
+</div>
+
+<div class="footer fade" style="animation-delay:.6s">
+<div>© <span id="year"></span> Veyra Utilities</div>
+</div>
+
+</div>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear()
+</script>
+
+</body></html>
